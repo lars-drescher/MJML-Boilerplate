@@ -1,0 +1,21 @@
+{
+  "name": "mjml-email-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "concurrently 'npm run watch' 'npm run server'",
+    "watch": "mjml -w ./src/*.mjml -o ./dist --config.beautify",
+    "build": "mjml ./src/*.mjml -o ./dist --config.minify",
+    "server": "npx live-server ./dist"
+  },
+  "keywords": [],
+  "author": "Lars Drescher",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "mjml": "^4.6.3"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
